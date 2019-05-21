@@ -5,17 +5,17 @@
     <title>Commmunications: Sendgrid</title>
     <authors>Codeminers Limited</authors>
     <owners>Codeminers Limited</owners>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <projectUrl>https://www.codeminers.co.uk</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>A wrapper to the open source Sendgrid nuget library with additional code to match Codeminers standard</description>
-    <releaseNotes>Fixes to ensure templates are sent to sendgrid</releaseNotes>
+    <releaseNotes>Correction to dependencies</releaseNotes>
     <copyright>Copyright Codeminers Limited © 2019</copyright>
     <license type="file">LICENSE.txt</license>
     <dependencies>
       <dependency id="Newtonsoft.Json" version="9.0.1" />
       <dependency id="Sendgrid" version="9.9.0" />
-      <dependency id="System.Net.Http" version="9.0" />
+      <dependency id="System.Net.Http" version="4.0" />
     </dependencies>
   </metadata>
   <files>
