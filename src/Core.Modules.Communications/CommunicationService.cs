@@ -72,6 +72,16 @@ namespace Core.Modules.Communications.Sendgrid
                     msg.AddTo(to.Email, to.Name);
                 }
 
+                if (!string.IsNullOrWhiteSpace(message))
+                {
+                    msg.PlainTextContent = message;
+                }
+
+                if (!string.IsNullOrWhiteSpace(htmlMessage))
+                {
+                    msg.HtmlContent = htmlMessage;
+                }
+
                 foreach (Models.EmailAddress email in bcc)
                 {
                     if (string.IsNullOrWhiteSpace(email))
