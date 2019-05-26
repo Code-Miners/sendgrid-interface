@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="CommunicationConfiguration.cs" company="Code Miners Limited">
+// <copyright file="AppSettingsConfiguration.cs" company="Code Miners Limited">
 //  Copyright (c) 2019 Code Miners Limited
 //   
 //  This program is free software: you can redistribute it and/or modify
@@ -21,7 +21,7 @@ namespace Core.Modules.Communications.Sendgrid
 {
     using System.Configuration;
 
-    public class CommunicationConfiguration : ICommunicationConfiguration
+    public class AppSettingsConfiguration : ICommunicationConfiguration
     {
         public string ApiKey => ConfigurationManager.AppSettings["CodeMiners:Modules:SendGrid:ApiKey"];
     }

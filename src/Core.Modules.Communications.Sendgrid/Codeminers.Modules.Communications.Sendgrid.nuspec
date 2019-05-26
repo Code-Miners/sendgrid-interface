@@ -5,13 +5,13 @@
     <title>Commmunications: Sendgrid</title>
     <authors>Codeminers Limited</authors>
     <owners>Codeminers Limited</owners>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
     <projectUrl>https://www.codeminers.co.uk</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>A wrapper to the open source Sendgrid nuget library with additional code to match Codeminers standard</description>
     <releaseNotes>Correction to dependencies</releaseNotes>
     <copyright>Copyright Codeminers Limited © 2019</copyright>
-    <license type="file">LICENSE.txt</license>
+    <license type="expression">LGPL-3.0-or-later</license>
     <dependencies>
       <dependency id="Newtonsoft.Json" version="9.0.1" />
       <dependency id="Sendgrid" version="9.9.0" />

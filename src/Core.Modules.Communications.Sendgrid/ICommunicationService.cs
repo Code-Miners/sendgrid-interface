@@ -25,55 +25,81 @@ namespace Core.Modules.Communications.Sendgrid
     public interface ICommunicationService
     {
         /// <summary>
-        /// Sends a communication asynchronously
+        /// Sends a communication synchronously
         /// </summary>
         /// <param name="from"></param>
         /// <param name="to"></param>
-        /// <param name="bcc"></param>
         /// <param name="subject"></param>
         /// <param name="message"></param>
         /// <param name="htmlMessage"></param>
         /// <param name="attachment"></param>
         /// <returns></returns>
-        bool SendCommunication(Sender from, Recipient to, EmailAddress[] bcc, string subject, string message, string htmlMessage, Attachment attachment);
-        
+        bool SendCommunication(Sender from, Recipient to, string subject, string message, string htmlMessage, Attachment attachment);
+
         /// <summary>
-        /// Sends a communication asynchronously
+        /// Sends a communication synchronously. Supports cc. 
         /// </summary>
         /// <param name="from"></param>
         /// <param name="to"></param>
-        /// <param name="bcc"></param>
+        /// <param name="cc"></param>
         /// <param name="subject"></param>
         /// <param name="message"></param>
         /// <param name="htmlMessage"></param>
         /// <param name="attachment"></param>
         /// <returns></returns>
-        bool SendCommunication(Sender from, Recipient[] to, EmailAddress[] bcc, string subject, string message, string htmlMessage, Attachment attachment);
-        
+        bool SendCommunication(Sender from, Recipient to, string subject, string message, string htmlMessage, Recipient[] cc, Attachment attachment);
+
         /// <summary>
-        /// Sends a communication asynchronously
+        /// Sends a communication synchronously. Supports cc and bcc. 
         /// </summary>
         /// <param name="from"></param>
         /// <param name="to"></param>
+        /// <param name="cc"></param>
         /// <param name="bcc"></param>
         /// <param name="subject"></param>
         /// <param name="message"></param>
         /// <param name="htmlMessage"></param>
         /// <param name="attachment"></param>
         /// <returns></returns>
-        Task<bool> SendCommunicationAsync(Sender from, Recipient to, EmailAddress[] bcc, string subject, string message, string htmlMessage, Attachment attachment);
-        
+        bool SendCommunication(Sender from, Recipient to, string subject, string message, string htmlMessage, Recipient[] cc, Recipient[] bcc, Attachment attachment);
+
         /// <summary>
-        /// Sends a communication asynchronously
+        /// Sends a communication synchronously
         /// </summary>
         /// <param name="from"></param>
         /// <param name="to"></param>
+        /// <param name="subject"></param>
+        /// <param name="message"></param>
+        /// <param name="htmlMessage"></param>
+        /// <param name="attachment"></param>
+        /// <returns></returns>
+        Task<bool> SendCommunicationAsync(Sender from, Recipient to, string subject, string message, string htmlMessage, Attachment attachment);
+
+        /// <summary>
+        /// Sends a communication synchronously. Supports cc. 
+        /// </summary>
+        /// <param name="from"></param>
+        /// <param name="to"></param>
+        /// <param name="cc"></param>
+        /// <param name="subject"></param>
+        /// <param name="message"></param>
+        /// <param name="htmlMessage"></param>
+        /// <param name="attachment"></param>
+        /// <returns></returns>
+        Task<bool> SendCommunicationAsync(Sender from, Recipient to, string subject, string message, string htmlMessage, Recipient[] cc, Attachment attachment);
+
+        /// <summary>
+        /// Sends a communication synchronously. Supports cc and bcc. 
+        /// </summary>
+        /// <param name="from"></param>
+        /// <param name="to"></param>
+        /// <param name="cc"></param>
         /// <param name="bcc"></param>
         /// <param name="subject"></param>
         /// <param name="message"></param>
         /// <param name="htmlMessage"></param>
         /// <param name="attachment"></param>
         /// <returns></returns>
-        Task<bool> SendCommunicationAsync(Sender from, Recipient[] to, EmailAddress[] bcc, string subject, string message, string htmlMessage, Attachment attachment);
+        Task<bool> SendCommunicationAsync(Sender from, Recipient to, string subject, string message, string htmlMessage, Recipient[] cc, Recipient[] bcc, Attachment attachment);
     }
 }

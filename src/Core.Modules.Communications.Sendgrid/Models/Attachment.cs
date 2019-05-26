@@ -57,9 +57,18 @@ namespace Core.Modules.Communications.Sendgrid.Models
         /// <param name="fileData"></param>
         public Attachment(string filename, string fileData)
         {
-            empty = false;
-            Filename = filename;
-            FileData = fileData;
+            if (string.IsNullOrWhiteSpace(filename) || string.IsNullOrWhiteSpace(fileData))
+            {
+                empty = true;
+                FileData = string.Empty;
+                Filename = string.Empty;
+            }
+            else
+            {
+                empty = false;
+                Filename = filename;
+                FileData = fileData;
+            }
         }
 
         public static bool IsNullOrEmpty(Attachment attachment)
