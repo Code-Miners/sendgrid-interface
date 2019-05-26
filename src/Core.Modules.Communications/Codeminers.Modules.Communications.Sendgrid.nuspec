@@ -20,6 +20,5 @@
   </metadata>
   <files>
     <file src="bin/release/Codeminers.Core.Modules.Communications.Sendgrid.dll" target="lib/net471"></file>
-    <file src="LICENSE.txt" target="" />
   </files>
 </package>

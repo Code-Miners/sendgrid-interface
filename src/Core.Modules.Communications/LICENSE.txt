@@ -1,7 +1,0 @@
-﻿This software is the copyright of Codeminers Limited.
-
-It is offered to clients of Codeminers Limited free of charge for use in projects managed and resourced by 
-Codeminers Limited.
-
-No warranty or liability is offered, assumed or accepted.
-
